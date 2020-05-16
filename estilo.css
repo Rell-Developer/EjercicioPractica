@@ -47,16 +47,18 @@ header nav ul li .Logo { /*Editando el logo del navegador*/
 }
 
 .IDW { /*Imagen de Desarrollo Web*/
-	width: 50%;
+	width: 48%;
 	height: 759px;
 	box-sizing: border-box;
 	overflow: hidden;
 	float: left;
 	display: inline-block;
+	max-width: 1000px;
+	min-width: 100px;
 }
 
 section { /*Editando la section*/
-	width: 50%;
+	width: 52%;
 	max-width: 1000px;
 	float: left;
 	overflow: hidden;
@@ -74,7 +76,6 @@ h1{ /*Editando el encabezado principal*/
 
 section article h2{ /*Editando el subtitulo*/
 	margin-top: 80px;
-	margin-bottom: 80px;
 	width: 85%;
 	font-size: 28px;
 }
@@ -87,10 +88,39 @@ section article h2{ /*Editando el subtitulo*/
 	width: 68%;
 	font-size: 18px;
 	margin-left: 15%;
+	margin-top: 80px;
 }
 
 .LetrasAzules{ /*Coloreando algunas de la descripcion*/
 	color: rgb(0,100,255);
+}
+
+.Contenedor{
+	background-color: orange;
+}
+
+/*Si la pantalla llega a una anchura maxima de 800px*/
+@media screen and (max-width: 850px){ 
+	.IDW{width: 100%;
+		height: 100%}
+
+	section{width: 100%;}
+
+	.Contacto{
+		margin-left: 30%;
+	}
+}
+
+@media screen and (max-width: 1350px){
+
+	.Descripcion{height: 40%;
+		margin-top: 30px;}
+
+	.IDW{height: 830px;}
+
+	.Contacto{
+		margin-left: 28%;
+	}
 }
 
 
