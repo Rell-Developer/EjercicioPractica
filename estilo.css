@@ -1,0 +1,96 @@
+*{ /*Reset y estableciendo una fuente*/ 
+	margin: 0;
+	padding: 0;
+	font-family: "Calibri";
+}
+
+header nav /*Editar el navegador*/
+{
+	width: 100%;
+	overflow: hidden;
+	box-sizing: border-box;
+	background: linear-gradient(to right, rgb(210,210,210), white 45%);
+	box-shadow: rgb(230,230,230) 0px 3px 2px;
+	position: absolute;
+}
+
+header nav ul { /*Editar las listas del navegador*/
+	list-style: none;
+}
+
+header nav ul li { /*Editar las opciones del navegador*/
+	float: left;
+	padding: 8px 8px 8px 8px;
+	margin: 5px;
+	display: block;
+	font-family: "Atkinson";
+}
+
+header nav ul li .Logo { /*Editando el logo del navegador*/
+	width: 25px;
+	height: 25px;
+	border-radius: 25px;
+	padding-right: 3px;
+	overflow: hidden;
+	margin-top: 0;
+	position:absolute;
+}
+
+.Bogdan{ /*Editando el boton principal*/
+	margin-left: 30px;
+	font-size: 18px;
+}
+
+.Contacto{ /*el boton de contacto*/
+	padding-top: 11px;
+	margin-left: 42%;
+}
+
+.IDW { /*Imagen de Desarrollo Web*/
+	width: 50%;
+	height: 759px;
+	box-sizing: border-box;
+	overflow: hidden;
+	float: left;
+	display: inline-block;
+}
+
+section { /*Editando la section*/
+	width: 50%;
+	max-width: 1000px;
+	float: left;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+section article{ /*Los articulos*/
+	margin: 60px auto;
+	width: 70%;
+}
+
+h1{ /*Editando el encabezado principal*/
+	font-size: 55px;
+}
+
+section article h2{ /*Editando el subtitulo*/
+	margin-top: 80px;
+	margin-bottom: 80px;
+	width: 85%;
+	font-size: 28px;
+}
+
+.Encabezado{ /*Editando la clase encabezado*/
+	margin-top: 17%;
+}
+
+.Descripcion{ /*Editando la descripcion*/
+	width: 68%;
+	font-size: 18px;
+	margin-left: 15%;
+}
+
+.LetrasAzules{ /*Coloreando algunas de la descripcion*/
+	color: rgb(0,100,255);
+}
+
+
