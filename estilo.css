@@ -1,24 +1,55 @@
-*{ /*Reset y estableciendo una fuente*/ 
+/*Variables*/
+:root{
+	/*Declaracion de variables*/
+	--color-background-nav:linear-gradient(to right, rgb(210,210,210), white 45%);
+
+	/*Margen derecho e izquierdo del contacto*/
+	--MDC: 3%;
+	--MIC: 42%;
+
+	/*Anchura y Altura de la Imagen de diseño web*/
+	--AnI: 48%;
+	--AlI: 759px;
+
+	/*Anchura del Section*/
+	--AnS:52%;
+
+	/*Margen de arriba del encabezado*/
+	--MAE:17%;
+
+	/*Margen de arriba, anchura  y altura de la descripcion*/
+	--MTD: 8%;
+	--AlD: 100%;
+	--AnD: 68%;
+}
+
+/*Reset y estableciendo una fuente*/ 
+*{ 
 	margin: 0;
 	padding: 0;
 	font-family: "Calibri";
 }
 
-header nav /*Editar el navegador*/
+/*-----------------Navegador-----------------*/
+
+/*Editar el navegador*/
+header nav 
 {
 	width: 100%;
 	overflow: hidden;
 	box-sizing: border-box;
-	background: linear-gradient(to right, rgb(210,210,210), white 45%);
+	background: var(--color-background-nav);
 	box-shadow: rgb(230,230,230) 0px 3px 2px;
 	position: absolute;
 }
 
-header nav ul { /*Editar las listas del navegador*/
+/*Editar las listas del navegador*/
+header nav ul { 
 	list-style: none;
 }
 
-header nav ul li { /*Editar las opciones del navegador*/
+/*Editar las opciones del navegador*/
+header nav ul li { 
 	float: left;
 	padding: 8px 8px 8px 8px;
 	margin: 5px;
@@ -26,7 +57,8 @@ header nav ul li { /*Editar las opciones del navegador*/
 	font-family: "Atkinson";
 }
 
-header nav ul li .Logo { /*Editando el logo del navegador*/
+/*Editando el logo del navegador*/
+header nav ul li .Logo { 
 	width: 25px;
 	height: 25px;
 	border-radius: 25px;
@@ -36,19 +68,25 @@ header nav ul li .Logo { /*Editando el logo del navegador*/
 	position:absolute;
 }
 
-.Bogdan{ /*Editando el boton principal*/
+/*Editando el boton principal del navegador*/
+.Bogdan{ 
 	margin-left: 30px;
 	font-size: 18px;
 }
 
-.Contacto{ /*el boton de contacto*/
+/*el boton de contacto*/
+.Contacto{ 
 	padding-top: 11px;
-	margin-left: 42%;
+	margin-left: var(--MIC);
+	margin-right: var(--MDC);
 }
 
-.IDW { /*Imagen de Desarrollo Web*/
-	width: 48%;
-	height: 759px;
+/*------------------Section------------------*/
+
+/*Imagen de Desarrollo Web*/
+.IDW { 
+	width: var(--AnI);
+	height: var(--AlI);
 	box-sizing: border-box;
 	overflow: hidden;
 	float: left;
@@ -57,70 +95,94 @@ header nav ul li .Logo { /*Editando el logo del navegador*/
 	min-width: 100px;
 }
 
-section { /*Editando la section*/
-	width: 52%;
+/*Editando la section*/
+section { 
+	width: var(--AnS);
 	max-width: 1000px;
 	float: left;
 	overflow: hidden;
 	box-sizing: border-box;
 }
 
-section article{ /*Los articulos*/
+/*Los articulos*/
+section article{ 
 	margin: 60px auto;
 	width: 70%;
 }
 
-h1{ /*Editando el encabezado principal*/
+/*Editando el encabezado principal*/
+h1{ 
 	font-size: 55px;
 }
 
-section article h2{ /*Editando el subtitulo*/
+/*Editando el subtitulo*/
+section article h2{ 
 	margin-top: 80px;
 	width: 85%;
 	font-size: 28px;
 }
 
-.Encabezado{ /*Editando la clase encabezado*/
-	margin-top: 17%;
+/*Editando la clase encabezado*/
+.Encabezado{ 
+	margin-top: var(--MAE);
 }
 
-.Descripcion{ /*Editando la descripcion*/
-	width: 68%;
+/*Editando la descripcion*/
+.Descripcion{ 
+	width: var(--AnD);
+	height: var(--AlD);
 	font-size: 18px;
 	margin-left: 15%;
-	margin-top: 80px;
+	margin-top: var(--MTD);
 }
 
-.LetrasAzules{ /*Coloreando algunas de la descripcion*/
+/*Coloreando algunas de la descripcion*/
+.LetrasAzules{ 
 	color: rgb(0,100,255);
 }
 
-.Contenedor{
-	background-color: orange;
-}
+/*------------------Responsive Desing------------------*/
 
-/*Si la pantalla llega a una anchura maxima de 800px*/
-@media screen and (max-width: 850px){ 
-	.IDW{width: 100%;
-		height: 100%}
+/*Si la pantalla llega a una anchura maxima de 1400px*/
+@media screen and (max-width: 1400px){
 
-	section{width: 100%;}
+	.Descripcion{
+		--AlD: 40%;
+	}
+
+	.IDW{--AlI: 830px;}
 
 	.Contacto{
-		margin-left: 30%;
+		--MIC: 1%;
 	}
 }
 
-@media screen and (max-width: 1350px){
+/*Si la pantalla llega a una anchura maxima de 975px*/
+@media screen and (max-width: 975px){ 
+		
+	.IDW{
+		--AnI: 100%;
+		--AlI: 100%;
+	}
 
-	.Descripcion{height: 40%;
-		margin-top: 30px;}
+	section{--AnS: 100%;}
 
-	.IDW{height: 830px;}
+	.Encabezado{ --MAE:10%;}
 
 	.Contacto{
-		margin-left: 28%;
+		--MIC: 15%;
 	}
 }
 
+/*Si la pantalla llega a una anchura maxima de 1225px*/
+@media screen and (max-width: 516px){
+		
+	.Contacto{
+		float: right;
+		margin-right: 47%;
+	}
 
+	.IDW{
+		margin-top:25%;
+	}
+}
