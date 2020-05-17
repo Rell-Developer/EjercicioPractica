@@ -77,6 +77,7 @@ header nav ul li .Logo {
 /*el boton de contacto*/
 .Contacto{ 
 	padding-top: 11px;
+	float: right;
 	margin-left: var(--MIC);
 	margin-right: var(--MDC);
 }
@@ -144,6 +145,7 @@ section article h2{
 /*------------------Responsive Desing------------------*/
 
 /*Si la pantalla llega a una anchura maxima de 1400px*/
+/*Acomodar como tanto la descripcion, la foto y el contacto*/
 @media screen and (max-width: 1400px){
 
 	.Descripcion{
@@ -158,6 +160,7 @@ section article h2{
 }
 
 /*Si la pantalla llega a una anchura maxima de 975px*/
+/*Acomodar como tanto la foto, la seccion de informacion, el encabezado, y el contacto*/
 @media screen and (max-width: 975px){ 
 		
 	.IDW{
@@ -170,19 +173,41 @@ section article h2{
 	.Encabezado{ --MAE:10%;}
 
 	.Contacto{
-		--MIC: 15%;
+		--MIC: 5%;
+	}
+}
+
+/*Si la pantalla llega a una anchura maxima de 810px*/
+/*Acomodar y darle animacion al contacto*/
+@media screen and (max-width: 810px){
+	.Contacto{
+		--MIC: 1%;
+		float: left;
+		transition: all 0.2s ease;
+	}
+}
+
+/*Si la pantalla llega a una anchura maxima de 770px*/
+/*Acomodar la imagen para que la barra de navegacion no la tape*/
+@media screen and (max-width: 770px){
+	.IDW{
+		margin-top: 10%;
+		transition: all 0.2s ease;
 	}
 }
 
 /*Si la pantalla llega a una anchura maxima de 1225px*/
+/*Acomodar la imagen para que no lo tape la barra de navegacion, acomodar el contacto*/
 @media screen and (max-width: 516px){
 		
 	.Contacto{
 		float: right;
 		margin-right: 47%;
+		transition: all 0.2s ease;
 	}
 
 	.IDW{
-		margin-top:25%;
+		margin-top:27%;
+		transition: all 0.2s ease;
 	}
 }
